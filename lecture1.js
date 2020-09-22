@@ -2,17 +2,23 @@
 const favoriteMovies = [];
 
 function addFavoriteMovie(movieName) {
-	let movieWords = movieName.split( " " );
-	if (!movieWords.includes("The")) {
+	let movieWords = movieName.split( " " ); // can skip this step
+	if (!movieWords.includes("The")) { // write directly (!movieName.includes("The"))
 		favoriteMovies.push(movieName);
 	}
 }
 
 // Prints the list of favorite movies and number of movies in the list
 function printFavoriteMovies() {
-	console.log("You have " + favoriteMovies.length + " favorite movies. They are: ");
-	for (i =0; i < favoriteMovies.length; i++) {
-		console.log(favoriteMovies[i]);
+	if (favoriteMovies.length == 0) {
+		console.log("You have no favorite movies.");
+	} else if (favoriteMovies.length == 1) {
+		console.log("You have 1 favorite movie. It is: " + favoriteMovies);
+	} else {
+		console.log("You have " + favoriteMovies.length + " favorite movies. They are: ");
+		for (i = 0; i < favoriteMovies.length; i++) {
+			console.log(favoriteMovies[i]);
+		}
 	}
 }
 
