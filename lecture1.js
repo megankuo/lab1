@@ -16,8 +16,8 @@ function printFavoriteMovies() {
 		console.log("You have 1 favorite movie. It is: " + favoriteMovies);
 	} else {
 		console.log("You have " + favoriteMovies.length + " favorite movies. They are: ");
-		for (i = 0; i < favoriteMovies.length; i++) {
-			console.log(favoriteMovies[i]);
+		for (i = 0; i < favoriteMovies.length; i++) {		// EQUALS iterator loop: for (var movie of favoriteMovies) { console.log(movie); }
+			console.log(favoriteMovies[i]);	
 		}
 	}
 }
